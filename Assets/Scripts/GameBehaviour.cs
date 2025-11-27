@@ -48,4 +48,15 @@ public class GameBehaviour : MonoBehaviour
 
     }
 
+    public void TitleScreen()
+    {
+        SceneManager.LoadScene("TitleScreen");
+
+    }
+
+    public void Title()
+    {
+        SceneManager.LoadScene("TitleScreen");
+
+    }
 }
