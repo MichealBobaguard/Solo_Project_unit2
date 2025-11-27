@@ -44,6 +44,9 @@ TagManager:
   - name: Background
     uniqueID: 3731287325
     locked: 0
+  - name: Water edge
+    uniqueID: 81322351
+    locked: 0
   - name: CollisionObjects
     uniqueID: 2320100167
     locked: 0
