@@ -18,7 +18,7 @@ public class GameBehaviour : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }   
+    }
     public void Inside()
     {
         SceneManager.LoadScene("InsideCave");
@@ -37,5 +37,5 @@ public class GameBehaviour : MonoBehaviour
     public void Title()
     {
         SceneManager.LoadScene("TitleScreen");
-    {
+    }
 }
