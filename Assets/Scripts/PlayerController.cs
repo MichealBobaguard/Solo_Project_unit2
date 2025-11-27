@@ -5,6 +5,7 @@ public class PlayerControllerTest : MonoBehaviour
     public float speed = 5f;
 
     private Rigidbody2D rb;
+    private Animator anim;
 
     private float moveHorizontal;
     private float moveVertical;
@@ -12,6 +13,7 @@ public class PlayerControllerTest : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
 
@@ -19,6 +21,18 @@ public class PlayerControllerTest : MonoBehaviour
     {
         // Apply movement using velocity
         rb.linearVelocity = new Vector2(moveHorizontal, moveVertical) * speed;
+
+        // Update animation only when moving
+        if (rb.linearVelocity != Vector2.zero)
+        {
+            anim.SetFloat("MoveX", moveHorizontal);
+            anim.SetFloat("MoveY", moveVertical);
+            anim.SetBool("Moving", true);
+        }
+        else
+        {
+            anim.SetBool("Moving", false);
+        }
 
     }
 
