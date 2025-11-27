@@ -49,5 +49,20 @@ public class PlayerControllerTest : MonoBehaviour
             moveVertical = 0;
     }
 
+    // don't worry about code above in corrilation with this
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "SceneTransitionTag")
+        {
+            GameBehaviour.instance.Inside();
+
+        }
+      
+        if (collision.gameObject.tag == "OutSide")
+        {
+            GameBehaviour.instance.Outside();
+
+        }
+    }
 
 }
